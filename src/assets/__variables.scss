@@ -1,0 +1,22 @@
+:root {
+  --c-bg-d: #111111;
+  --c-bg: #1d1d1d;
+  --c-bg-l: #414142;
+  --c-basic: #2272ff;
+  --c-t: #ffffff;
+  --c-red: #ff0000;
+  --c-yellow: #ffe30b;
+  --c-green: #56ac00;
+}
+
+$col-bg-dark: var(--c-bg-d);
+$col-bg: var(--c-bg);
+$col-bg-light: var(--c-bg-l);
+$col-basic: var(--c-basic);
+$col-text: var(--c-t);
+$col-red: var(--c-red);
+$col-green: var(--c-green);
+$col-yellow: var(--c-yellow);
+
+$t-base: 0.4s ease-in-out;
+$t-fast: 0.2s ease-in-out;

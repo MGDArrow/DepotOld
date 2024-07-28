@@ -1,0 +1,152 @@
+@import "@/assets/__variables.scss";
+
+//----CSS Reset----
+// Указываем box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// Убираем внутренние и внешние отступы, а также стилизацию списков с классом
+ul[class],
+ol[class] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+// Убираем внешние отступы
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+// Выставляем основные настройки по-умолчанию для body
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: normal;
+}
+// Элементы ссылок, у которых нет класса, сбрасываем до дефолтных стилей
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+// Упрощаем работу с изображениями
+img {
+  max-width: 100%;
+  display: block;
+}
+// Наследуем шрифты для инпутов и кнопок
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+// Сбрасываем стиль ссылок
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+
+html {
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 10px;
+}
+
+body {
+  background-color: $col-bg-dark;
+  color: $col-text;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+h1 {
+  width: 100%;
+  height: calc(8dvh - 10px);
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.7em;
+  line-height: calc(8dvh - 10px);
+  text-align: center;
+  background-color: $col-basic;
+  text-transform: uppercase;
+}
+h2 {
+  width: 100%;
+  height: calc(6dvh - 10px);
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: calc(6dvh - 10px);
+  text-align: center;
+  background-color: $col-bg-light;
+  text-transform: uppercase;
+  color: $col-text;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  height: calc(8dvh - 10px);
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.7em;
+  line-height: calc(8dvh - 10px);
+  text-align: center;
+  text-transform: uppercase;
+  gap: 5px;
+  &__add {
+    width: calc(8dvh - 10px);
+    background-color: $col-bg-light;
+  }
+  &__h1 {
+    display: block;
+    background-color: $col-basic;
+    flex-grow: 1;
+  }
+}
+
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 4px solid $col-text;
+  border-bottom-color: $col-basic;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.height__body {
+  height: calc(100dvh - (8dvh - 10px) - 25px);
+  overflow: auto;
+  overflow-x: hidden;
+}
